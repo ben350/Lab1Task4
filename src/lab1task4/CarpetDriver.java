@@ -16,7 +16,7 @@ public class CarpetDriver {
     public static void main(String[] args) {
         //making the local vars
         Scanner scan = new Scanner(System.in);
-        double cost;
+        double cost = 8;// default value changes later
         double length;
         double width;
         RoomDimension dim;
@@ -28,10 +28,32 @@ public class CarpetDriver {
         System.out.println("Now enter the width of the room");
         width = scan.nextDouble();
         
+        String userColor;
+        
+        boolean enteredWrongColor = false;
+        do {
+            System.out.println("What color carpet do you want?");
+            System.out.println("Enter 'r' for red or 'b' for blue");
+            userColor = scan.next();
+            
+            switch (userColor) {
+                case "r":
+                    cost = 7;
+                    break;
+                case "b":
+                    cost = 9;
+                    break;
+                default:
+                    System.out.println("Enter 'r' or 'b' please");
+                    enteredWrongColor = true;
+                    break;
+            }
+        } while (enteredWrongColor);
+        
+        
         //creating the RoomDimension object using the entered data
         dim = new RoomDimension(length, width);
-        //setting the cost to 8
-        cost = 8;
+        
         //making the roomCarpet object using dim and cost
         carpet = new RoomCarpet(dim, cost);
         
