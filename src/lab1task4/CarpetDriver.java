@@ -59,7 +59,7 @@ public class CarpetDriver {
         
         //printing the area and cost to the user
         System.out.println("The area of the carpet is: " + dim.toString());
-        System.out.println("The total cost for this carpet is: " + carpet.toString());
+        System.out.println("The total cost for this carpet is: $" + carpet.toString());
          
     }
 }
