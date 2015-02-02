@@ -34,12 +34,10 @@ public class CarpetDriver {
         cost = 8;
         //making the roomCarpet object using dim and cost
         carpet = new RoomCarpet(dim, cost);
-        //making the strings with the area and cost values
-        String areaString = dim.toString();
-        String costString = carpet.toString();
+        
         //printing the area and cost to the user
-        System.out.println("The area of the carpet is: " + areaString);
-        System.out.println("The total cost for this carpet is: " + costString);
-          
+        System.out.println("The area of the carpet is: " + dim.toString());
+        System.out.println("The total cost for this carpet is: " + carpet.toString());
+         
     }
 }
